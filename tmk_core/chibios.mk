@@ -26,7 +26,7 @@ endif
 # Imported source files and paths
 CHIBIOS = $(TOP_DIR)/lib/chibios
 CHIBIOS_CONTRIB = $(TOP_DIR)/lib/chibios-contrib
-# Startup files. Try a few different locations, for compability with old versions and 
+# Startup files. Try a few different locations, for compability with old versions and
 # for things hardware in the contrib repository
 STARTUP_MK = $(CHIBIOS)/os/common/ports/ARMCMx/compilers/GCC/mk/startup_$(MCU_STARTUP).mk
 ifeq ("$(wildcard $(STARTUP_MK))","")
@@ -88,14 +88,14 @@ CHIBISRC = $(STARTUPSRC) \
        $(STREAMSSRC) \
 	   $(STARTUPASM) \
 	   $(PORTASM) \
-	   $(OSALASM)         
+	   $(OSALASM)
 
 CHIBISRC := $(patsubst $(TOP_DIR)/%,%,$(CHIBISRC))
-	   
+
 EXTRAINCDIRS += $(CHIBIOS)/os/license \
          $(STARTUPINC) $(KERNINC) $(PORTINC) $(OSALINC) \
          $(HALINC) $(PLATFORMINC) $(BOARDINC) $(TESTINC) \
-         $(STREAMSINC) $(CHIBIOS)/os/various 
+         $(STREAMSINC) $(CHIBIOS)/os/various
 
 #
 # Project, sources and paths
@@ -112,17 +112,17 @@ SIZE = arm-none-eabi-size
 AR = arm-none-eabi-ar
 NM = arm-none-eabi-nm
 HEX = $(OBJCOPY) -O $(FORMAT)
-EEP = 
+EEP =
 BIN = $(OBJCOPY) -O binary
 
-THUMBFLAGS = -DTHUMB_PRESENT -mno-thumb-interwork -DTHUMB_NO_INTERWORKING -mthumb -DTHUMB 
+THUMBFLAGS = -DTHUMB_PRESENT -mno-thumb-interwork -DTHUMB_NO_INTERWORKING -mthumb -DTHUMB
 
-COMPILEFLAGS += -fomit-frame-pointer 
+COMPILEFLAGS += -fomit-frame-pointer
 COMPILEFLAGS += -falign-functions=16
 COMPILEFLAGS += -ffunction-sections
 COMPILEFLAGS += -fdata-sections
 COMPILEFLAGS += -fno-common
-COMPILEFLAGS += $(THUMBFLAGS) 
+COMPILEFLAGS += $(THUMBFLAGS)
 
 CFLAGS += $(COMPILEFLAGS)
 
@@ -147,4 +147,4 @@ DEBUG = gdb
 EXTRALIBDIRS = $(RULESPATH)/ld
 
 dfu-util: $(BUILD_DIR)/$(TARGET).bin sizeafter
-	dfu-util -D $(BUILD_DIR)/$(TARGET).bin
+	dfu-util -S mk20dx256vlh7 -D $(BUILD_DIR)/$(TARGET).bin
