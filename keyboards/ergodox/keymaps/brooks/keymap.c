@@ -15,7 +15,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * |  Tab   |   Q  |   W  |   E  |   R  |   T  |  [   |           |   ]  |   Y  |   U  |   I  |   O  |   P  |   -    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |  Ctrl  |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |   '    |
+ * |Ctrl/Esc|   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  |   '    |
  * |--------+------+------+------+------+------|  \   |           |   /  |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |  Up  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -25,8 +25,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        | ESC  | Mute |       | Pl/Ps|  ESC |
  *                                 ,------|------|------|       |------+------+------.
  *                                 |      |      | Prev |       | Next |      |      |
- *                                 |  ESC |Backsp|------|       |------| Enter| Space|
- *                                 |      |ace   | Vol- |       | Vol+ |      |      |
+ *                                 |Space | Back |------|       |------| Enter| Space|
+ *                                 |      | space| Vol- |       | Vol+ |      |      |
  *                                 `--------------------'       `--------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                                                 KC_ESC,   KC_MUTE,
                                                                           KC_MPRV,
-                                                      KC_ESC,   KC_BSPC,  KC_VOLD,
+                                                      KC_SPC,   KC_BSPC,  KC_VOLD,
 
         // Right Hand
         KC_FN1,         KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_EQL,
