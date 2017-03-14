@@ -63,10 +63,10 @@ bool display_welcome(keyframe_animation_t* animation, visualizer_state_t* state)
 // Don't worry, if the startup animation is long, you can use the keyboard like normal
 // during that time
 static keyframe_animation_t startup_animation = {
-    .num_frames = 4,
+    .num_frames = 3,
     .loop = false,
-    .frame_lengths = {0, MS2ST(1000), MS2ST(5000), 0},
-    .frame_functions = {display_welcome, keyframe_animate_backlight_color, keyframe_no_operation, enable_visualization},
+    .frame_lengths = {0, MS2ST(5000), 0},
+    .frame_functions = {display_welcome, keyframe_no_operation, enable_visualization},
 };
 
 // The color animation animates the LCD color when you change layers
