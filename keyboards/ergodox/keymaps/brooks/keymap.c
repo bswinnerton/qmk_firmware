@@ -3,6 +3,10 @@
 #include "action_layer.h"
 #include "version.h"
 
+#ifdef SUBPROJECT_infinity
+#include "visualizer/lcd_backlight.h"
+#endif
+
 #define BASE 0 // default layer
 #define ECTL 1 // default layer
 #define SYMB 2 // symbols
@@ -189,11 +193,22 @@ void matrix_scan_user(void) {
     ergodox_right_led_3_off();
     switch (layer) {
       // TODO: Make this relevant to the ErgoDox EZ.
+        case 0:
+            #ifdef SUBPROJECT_infinity
+            lcd_backlight_hal_color(0, 0, 0);
+            #endif
+            break;
         case 1:
             ergodox_right_led_1_on();
+            #ifdef SUBPROJECT_infinity
+            lcd_backlight_hal_color(0, 0, 0);
+            #endif
             break;
         case 2:
             ergodox_right_led_2_on();
+            #ifdef SUBPROJECT_infinity
+            lcd_backlight_hal_color(0, 5000, 0);
+            #endif
             break;
         default:
             // none
