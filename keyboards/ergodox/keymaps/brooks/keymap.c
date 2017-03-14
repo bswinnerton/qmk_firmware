@@ -201,7 +201,7 @@ void matrix_scan_user(void) {
         case 1:
             ergodox_right_led_1_on();
             #ifdef SUBPROJECT_infinity
-            lcd_backlight_hal_color(5000, 0, 0);
+            lcd_backlight_hal_color(0, 0, 0);
             #endif
             break;
         case 2:

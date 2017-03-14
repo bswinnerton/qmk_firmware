@@ -108,13 +108,10 @@ void update_user_visualizer_state(visualizer_state_t* state) {
     // state->status.default_layer
     // state->status.leds (see led.h for available statuses)
     if (state->status.layer & 0x4) {
-        state->target_lcd_color = LCD_COLOR(0xA0, 0xB0, 0xFF);
         state->layer_text = "Mouse Mode";
     } else if (state->status.layer & 0x2) {
-        state->target_lcd_color = LCD_COLOR(0x50, 0xB0, 0xFF);
         state->layer_text = "ESC-Control mode";
     } else {
-        state->target_lcd_color = LCD_COLOR(0x50, 0xB0, 0xFF);
         state->layer_text = "QWERTY mode";
     }
     // You can also stop existing animations, and start your custom ones here
