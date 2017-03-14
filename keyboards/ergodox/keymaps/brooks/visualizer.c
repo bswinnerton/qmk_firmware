@@ -36,7 +36,7 @@ SOFTWARE.
 #include "visualizer.h"
 #include "led_test.h"
 
-static const char* welcome_text[] = {"TMK", "Infinity Ergodox"};
+static const char* welcome_text[] = {"Brooks'", "Infinity Ergodox"};
 
 // Just an example how to write custom keyframe functions, we could have moved
 // all this into the init function
