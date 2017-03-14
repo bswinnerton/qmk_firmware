@@ -83,10 +83,10 @@ static keyframe_animation_t color_animation = {
 // The LCD animation alternates between the layer name display and a
 // bitmap that displays all active layers
 static keyframe_animation_t lcd_animation = {
-    .num_frames = 2,
-    .loop = true,
-    .frame_lengths = {MS2ST(2000), MS2ST(2000)},
-    .frame_functions = {keyframe_display_layer_text, keyframe_display_layer_bitmap},
+    .num_frames = 1,
+    .loop = false,
+    .frame_lengths = {MS2ST(2000)},
+    .frame_functions = {keyframe_display_layer_text},
 };
 
 void initialize_user_visualizer(visualizer_state_t* state) {
