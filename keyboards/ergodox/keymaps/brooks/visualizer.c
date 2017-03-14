@@ -127,7 +127,7 @@ void user_visualizer_suspend(visualizer_state_t* state) {
     uint8_t sat = LCD_SAT(state->current_lcd_color);
     state->target_lcd_color = LCD_COLOR(hue, sat, 0);
     //~ start_keyframe_animation(&suspend_animation);
-	stop_keyframe_animation(&lcd_animation);
+    stop_keyframe_animation(&lcd_animation);
 }
 
 void user_visualizer_resume(visualizer_state_t* state) {
