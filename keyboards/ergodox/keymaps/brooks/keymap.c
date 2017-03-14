@@ -11,7 +11,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |   `    |   1  |   2  |   3  |   4  |   5  | LAY1 |           | LAY2 |   6  |   7  |   8  |   9  |   0  |   =    |
+ * |   `    |   1  |   2  |   3  |   4  |   5  | LAY2 |           | LAY2 |   6  |   7  |   8  |   9  |   0  |   =    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * |  Tab   |   Q  |   W  |   E  |   R  |   T  |  [   |           |   ]  |   Y  |   U  |   I  |   O  |   P  |   -    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = KEYMAP(  // layer 0 : default
 
         // Left Hand
-        KC_GRV,         KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_FN0,
+        KC_GRV,         KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_FN1,
         KC_TAB,         KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_LBRACKET,
         CTL_T(KC_ESC),  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,
         KC_LSFT,        KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_BSLASH,
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 1: Symbol Layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |Version |  F1  |  F2  |  F3  |  F4  |  F5  | LAY1 |           | LAY2 |  F6  |  F7  |  F8  |  F9  |  F10 |   F11  |
+ * |Version |  F1  |  F2  |  F3  |  F4  |  F5  | LAY1 |           | LAY1 |  F6  |  F7  |  F8  |  F9  |  F10 |   F11  |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |   F12  |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                           KC_TRNS,
                                                       KC_BTN1,  KC_BTN1,  KC_TRNS,
        // Right hand
-       KC_FN1,          KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,
+       KC_FN0,          KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,
        KC_TRNS,         KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_F12,
                         KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
        KC_TRNS,         KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_MS_U,  KC_TRNS,
