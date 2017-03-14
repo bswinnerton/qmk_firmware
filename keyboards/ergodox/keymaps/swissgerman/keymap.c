@@ -8,7 +8,6 @@
 #include "visualizer/lcd_backlight.h"
 #endif
 
-
 #define BASE 0 // default layer
 #define SYMB 1 // symbols
 #define MDIA 2 // media keys
@@ -274,7 +273,7 @@ void send_key(uint16_t keycode) {
 
 void go_back_based_on_tag(char* tag) {
   const int BRACKETS_AND_SLASH_LENGTH = 3;
-  
+
   for (int i=0; i < strlen(tag) + BRACKETS_AND_SLASH_LENGTH; i++) {
     send_key(KC_LEFT);
   }
