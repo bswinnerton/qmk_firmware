@@ -97,7 +97,6 @@ void initialize_user_visualizer(visualizer_state_t* state) {
     state->target_lcd_color = LCD_COLOR(0x10, 0xFF, 0xFF);
     start_keyframe_animation(&startup_animation);
     //~ start_keyframe_animation(&led_test_animation);
-	set_brightness_all_leds(20);
 }
 
 void update_user_visualizer_state(visualizer_state_t* state) {
@@ -136,5 +135,4 @@ void user_visualizer_resume(visualizer_state_t* state) {
     state->target_lcd_color = LCD_COLOR(0x10, 0xFF, 0xFF);
     //~ start_keyframe_animation(&resume_animation);
     //~ start_keyframe_animation(&led_test_animation);
- 	set_brightness_all_leds(20);
 }
