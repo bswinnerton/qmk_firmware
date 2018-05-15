@@ -3,10 +3,6 @@
 #include "action_layer.h"
 #include "version.h"
 
-#ifdef SUBPROJECT_infinity
-#include "visualizer/lcd_backlight.h"
-#endif
-
 #define BASE 0 // default layer
 #define ECTL 1 // default layer
 #define SYMB 2 // symbols
