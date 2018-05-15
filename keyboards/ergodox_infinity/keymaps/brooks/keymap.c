@@ -180,35 +180,23 @@ void matrix_init_user(void) {
 
 // Runs constantly in the background, in a loop.
 void matrix_scan_user(void) {
-
     uint8_t layer = biton32(layer_state);
 
     ergodox_board_led_off();
-    ergodox_right_led_1_off();
-    ergodox_right_led_2_off();
-    ergodox_right_led_3_off();
+    ergodox_led_lower_off();
+    ergodox_led_raise_off();
+    ergodox_led_adjust_off();
     switch (layer) {
-      // TODO: Make this relevant to the ErgoDox EZ.
         case 0:
-            #ifdef SUBPROJECT_infinity
-            lcd_backlight_hal_color(0, 0, 0);
-            #endif
+            ergodox_led_lower_on();
             break;
         case 1:
-            ergodox_right_led_1_on();
-            #ifdef SUBPROJECT_infinity
-            lcd_backlight_hal_color(0, 0, 0);
-            #endif
+            ergodox_led_raise_on();
             break;
         case 2:
-            ergodox_right_led_2_on();
-            #ifdef SUBPROJECT_infinity
-            lcd_backlight_hal_color(0, 5000, 0);
-            #endif
+            ergodox_led_adjust_on();
             break;
         default:
-            // none
             break;
     }
-
 };
