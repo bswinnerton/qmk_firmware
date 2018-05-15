@@ -199,10 +199,6 @@ endif
 # List any extra directories to look for libraries here.
 EXTRALIBDIRS = $(RULESPATH)/ld
 
-<<<<<<< HEAD
-dfu-util: $(BUILD_DIR)/$(TARGET).bin sizeafter
-	dfu-util -S mk20dx256vlh7 -D $(BUILD_DIR)/$(TARGET).bin
-=======
 DFU_UTIL ?= dfu-util
 
 # Generate a .qmk for the QMK-FF
@@ -234,4 +230,3 @@ dfu-util: $(BUILD_DIR)/$(TARGET).bin cpfirmware sizeafter
 
 bin: $(BUILD_DIR)/$(TARGET).bin sizeafter
 	$(COPY) $(BUILD_DIR)/$(TARGET).bin $(TARGET).bin;
->>>>>>> upstream/master
